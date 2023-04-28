@@ -51,8 +51,8 @@ double VEGETATION_THR = -SENSOR_HEIGHT * 3 / 4;
 struct PointXYZILID {
   PCL_ADD_POINT4D;  // quad-word XYZ
   float intensity;  ///< laser intensity reading
-  uint16_t label;   ///< point label
-  uint16_t id;
+  std::uint16_t label;   ///< point label
+  std::uint16_t id;
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW  // ensure proper alignment
 } EIGEN_ALIGN16;
 
@@ -60,8 +60,8 @@ struct PointXYZILID {
 POINT_CLOUD_REGISTER_POINT_STRUCT(PointXYZILID,
                                   (float, x, x)(float, y, y)(float, z,
                                                              z)(float, intensity,
-                                                                intensity)(uint16_t, label,
-                                                                           label)(uint16_t, id, id))
+                                                                intensity)(std::uint16_t, label,
+                                                                           label)(std::uint16_t, id, id))
 
 void PointXYZILID2XYZI(pcl::PointCloud<PointXYZILID>& src,
                        pcl::PointCloud<pcl::PointXYZI>::Ptr dst) {
