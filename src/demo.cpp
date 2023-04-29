@@ -37,6 +37,7 @@ class PatchworkppGroundSeg : public rclcpp::Node {
         sensor_msgs::msg::PointCloud2 cloud_ROS;
         pcl::toROSMsg(cloud, cloud_ROS);
         cloud_ROS.header.frame_id = frame_id;
+        cloud_ROS.header.stamp = rclcpp::Clock().now();
         return cloud_ROS;
     }
 
