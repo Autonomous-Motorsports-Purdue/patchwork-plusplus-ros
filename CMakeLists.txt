@@ -39,6 +39,11 @@ ament_auto_package(
   CONFIG_EXTRAS "${PROJECT_NAME}-extras.cmake"
 )
 
+install(DIRECTORY
+  launch config rviz
+  DESTINATION share/${PROJECT_NAME}
+)
+
 # tests
 if(AMENT_ENABLE_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
