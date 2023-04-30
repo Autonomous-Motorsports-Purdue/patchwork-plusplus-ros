@@ -124,7 +124,7 @@ public:
     num_sectors_each_zone_ = node_handle_->declare_parameter(
         "czm/num_sectors_each_zone", std::vector<long int>{16, 32, 54, 32});
     num_rings_each_zone_ = node_handle_->declare_parameter(
-        "czm/mum_rings_each_zone", std::vector<long int>{2, 4, 4, 4});
+        "czm/num_rings_each_zone", std::vector<long int>{2, 4, 4, 4});
     elevation_thr_ = node_handle_->declare_parameter(
         "czm/elevation_thresholds", std::vector<double>{0., 0., 0., 0.});
     flatness_thr_ = node_handle_->declare_parameter(

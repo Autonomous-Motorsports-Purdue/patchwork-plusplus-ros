@@ -4,7 +4,7 @@
 
     <!-- <node name="rviz" pkg="rviz2" exec="rviz2" args="-d $(find-pkg-share patchworkpp)/rviz/demo.rviz"/> -->
 
-    <node name="pathworkpp_demo" pkg="patchworkpp" exec="demo" output="screen">
+    <node name="patchworkpp_demo" pkg="patchworkpp" exec="demo" output="screen">
         <param name="cloud_topic" value="/velodyne_points" />
         <param from="$(find-pkg-share patchworkpp)/config/params.yaml" />
     </node>
